@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Спасибо!{% endblock %}
+
+{% block body %}
+    <div class="form-wrapper" style="text-align: center;">
+        <h2 style="color: #4361ee; margin-bottom: 20px;">Спасибо за вашу заявку!</h2>
+        <p style="font-size: 17px; margin-bottom: 30px;">Наш менеджер свяжется с вами в ближайшее время.</p>
+
+        <div style="display: flex; justify-content: center; gap: 15px;">
+            <a href="{{ path('lead_form1') }}" class="btn-submit" style="width: auto; padding: 10px 20px;">
+                ← Форма 1
+            </a>
+            <a href="{{ path('lead_form2') }}" class="btn-submit" style="width: auto; padding: 10px 20px;">
+                ← Форма 2
+            </a>
+        </div>
+    </div>
+{% endblock %}

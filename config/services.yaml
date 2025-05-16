@@ -20,5 +20,13 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
+    App\Service\AmoCrmIntegrator:
+        arguments:
+            $projectDir: '%kernel.project_dir%'
+            $defaultLeadName: 'Заявка с сайта AONik'
+
+    App\Handler\LeadFormHandler:
+        arguments:
+            $amoIntegrator: '@App\Service\AmoCrmIntegrator'
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

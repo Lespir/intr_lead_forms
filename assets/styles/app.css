@@ -1,3 +1,76 @@
-body {
-    background-color: skyblue;
+.form-wrapper {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.form-tabs {
+    display: flex;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.form-tab {
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #6c757d;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.form-tab.active {
+    color: #4361ee;
+    border-bottom-color: #4361ee;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #495057;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+.form-control:focus {
+    border-color: #4361ee;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: #4361ee;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background: #3a56d4;
 }

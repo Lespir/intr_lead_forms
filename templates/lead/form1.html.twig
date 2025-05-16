@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Форма 1{% endblock %}
+
+{% block body %}
+    <div class="form-wrapper">
+        <div class="form-tabs">
+            <div class="form-tab active">Форма 1</div>
+            <a href="{{ path('lead_form2') }}" class="form-tab">Форма 2</a>
+        </div>
+
+        <form method="post">
+            <input type="hidden" name="_token" value="{{ csrf_token('form1') }}">
+
+            <div class="form-group">
+                <label for="contact_name">Ваше имя</label>
+                <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Иван Иванов" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+7 (999) 123-45-67" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email_lead" class="form-control" placeholder="example@mail.com">
+            </div>
+
+            <div class="form-group">
+                <label for="comment_lead">Комментарий</label>
+                <textarea id="comment_lead" name="comment_lead" class="form-control" placeholder="Ваш комментарий..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Отправить заявку</button>
+        </form>
+    </div>
+{% endblock %}
